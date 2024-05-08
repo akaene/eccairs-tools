@@ -14,6 +14,11 @@ plugins {
     id 'jacoco'
 }
 
+repositories {
+    maven { url "https://dev.akaene.com/m2repo" }
+}
+
+
 dependencies {
     implementation project(':core')
     implementation project(':eccairs-to-rdf')
@@ -27,6 +32,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.data:spring-data-commons'
     implementation('com.jayway.jsonpath:json-path:2.8.0')
+
+    implementation 'com.akaene:eccairs-taxonomy-service:0.0.2'
 
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
     implementation 'com.konghq:unirest-java:3.11.11'
